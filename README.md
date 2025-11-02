@@ -1,16 +1,16 @@
-# Astro Starter Kit: Portfolio
+# Nicolás Siciliano · Portfolio
 
-```sh
-pnpm create astro@latest -- --template portfolio
-```
+This repository contains my personal portfolio built with Astro. It highlights the products, SaaS platforms, and marketing experiences I deliver—from laboratory inventory systems and headless commerce templates to bespoke landing pages for creative studios. The site showcases my approach to full-stack development, product strategy, and data-rich interfaces.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/portfolio/devcontainer.json)
+## About Me
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+I’m Nicolás Siciliano, a full-stack product developer focused on high-impact web applications built with Next.js, Astro, and modern tooling. I partner with teams to model complex domains, craft user-centric interfaces, and integrate billing, authentication, and automation flows that scale. My work spans SaaS platforms, headless commerce experiences, and content-rich marketing sites.
 
-![portfolio](https://user-images.githubusercontent.com/357379/210779178-a98f0fb7-6b1a-4068-894c-8e1403e26654.jpg)
+## What You’ll Find Here
+
+- Case studies detailing the architecture, responsibilities, and outcomes of selected projects.
+- Highlights of my expertise in full-stack product development, headless commerce integrations, and data visualisation.
+- Contact paths and social links for collaboration opportunities.
 
 ## 🧞 Commands
 
@@ -25,6 +25,6 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Learn More
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Explore the portfolio at your own pace, or reach out if you’d like to discuss new projects. For more on Astro, visit the [official documentation](https://docs.astro.build).

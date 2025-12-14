@@ -9,6 +9,7 @@ tags:
   - Astro
   - Web Design
   - Landing Page
+projectUrl: https://elrincondelarteapp.vercel.app
 ---
 
 # El Rincón del Arte · Landing Page

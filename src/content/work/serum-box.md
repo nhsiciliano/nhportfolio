@@ -9,6 +9,7 @@ tags:
   - SaaS
   - Product Development
   - Next.js
+projectUrl: https://serum-box.vercel.app
 ---
 
 ## Project Overview

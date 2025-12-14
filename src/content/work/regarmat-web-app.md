@@ -9,6 +9,7 @@ tags:
   - Next.js
   - Data Visualization
   - Tailwind CSS
+projectUrl: https://www.regarmat.com.ar
 ---
 
 # RegarMat · Scientific Web App

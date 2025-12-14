@@ -9,6 +9,7 @@ tags:
   - Next.js
   - Headless CMS
   - eCommerce
+projectUrl: https://samuel-music-tour.vercel.app
 ---
 
 # Samuel Music Tour · Headless Commerce Template

@@ -1,7 +1,7 @@
 ---
 title: IA Profesor · Fullstack Education Platform
 publishDate: 2024-07-20 00:00:00
-img: /assets/stock-2.jpg
+img: /assets/stock-2-new.jpg
 img_alt: Education dashboard with learning paths, progress analytics, and AI tutor chat
 description: |
   Fullstack learning platform featuring an AI tutor with streaming responses, learning paths, achievements, and analytics, built with Next.js and NestJS.

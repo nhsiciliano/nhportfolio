@@ -9,7 +9,7 @@ tags:
   - Wix Studio
   - Fullstack
   - Ticketing
-projectUrl: https://ticketall.net
+projectUrl: https://ticketallevent.wixstudio.com/ticketall-net
 ---
 
 # Ticketall · Digital Ticketing & Event Platform

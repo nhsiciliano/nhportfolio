@@ -1,8 +1,8 @@
 ---
 title: Serum Box
 publishDate: 2024-06-01 00:00:00
-img: /assets/stock-1.jpg
-img_alt: Digital control panel managing racks, tubes, and reagents for a laboratory
+img: /assets/serum-box-image.webp
+img_alt: Serum Box laboratory platform landing page for managing samples and reagents
 description: |
   SaaS platform that digitises rack, tube, and reagent traceability for clinical labs, complete with multi-channel billing flows and automated support playbooks.
 tags:

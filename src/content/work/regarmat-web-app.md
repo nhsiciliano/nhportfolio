@@ -1,8 +1,8 @@
 ---
 title: RegarMat · Scientific Web App
 publishDate: 2024-02-10 00:00:00
-img: /assets/stock-4.jpg
-img_alt: Scientific dashboard with charts and data inputs displayed on a dark interface
+img: /assets/regar-mat-image.webp
+img_alt: RegArMAT landing page for the Argentine Registry of Thrombotic Microangiopathies
 description: |
   Scientific data processing app built with Next.js, offering intuitive inputs, algorithmic processing, and visual analytics for research workflows.
 tags:

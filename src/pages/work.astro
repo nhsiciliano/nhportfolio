@@ -1,37 +1,29 @@
 ---
-import { getCollection } from "astro:content";
-import ContactCTA from "../components/ContactCTA.astro";
-import Grid from "../components/Grid.astro";
-import Hero from "../components/Hero.astro";
-import PortfolioPreview from "../components/PortfolioPreview.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
 
-const projects = (await getCollection("work")).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
-);
+const projects = (await getCollection('work')).sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 ---
 
-<BaseLayout
-	title="My Work | Nicolás Siciliano"
-	description="Learn about Nicolás Siciliano's most recent projects"
->
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="My Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
-				align="start"
-			/>
-			<Grid variant="offset">
-				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
-					))
-				}
-			</Grid>
-		</main>
+<BaseLayout title="Work | Nicolás Siciliano" description="Selected applications, SaaS platforms, and websites built by Nicolás Siciliano.">
+	<main class="page-main" id="main">
+		<section class="page-intro container"><p class="eyebrow">Work</p><h1 class="intro-heading">Built for real-world complexity.</h1><p class="intro-copy">A selection of products and websites spanning science, education, commerce, and infrastructure.</p></section>
+		<section class="container work-section" aria-label="Projects">
+			<div class="work-grid">{projects.map((project, index) => <div class:list={['work-item', { 'work-featured': index === 0 }, 'reveal']}><PortfolioPreview project={project} variant={index === 0 ? 'featured' : 'standard'} index={index} /></div>)}</div>
+		</section>
 		<ContactCTA />
-	</div>
+	</main>
 </BaseLayout>
+
+<style>
+	.page-intro { padding-block: clamp(4rem, 8vw, 8rem) clamp(4rem, 7vw, 7rem); }
+	.page-intro h1 { margin-top: 1.3rem; }
+	.page-intro .intro-copy { margin-top: 2rem; }
+	.work-section { padding-bottom: clamp(5rem, 10vw, 10rem); }
+	.work-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(3rem, 7vw, 7rem) clamp(1.5rem, 4vw, 4rem); }
+	.work-featured { grid-column: 1 / -1; }
+	.work-item:nth-child(3), .work-item:nth-child(5) { padding-top: clamp(0rem, 8vw, 7rem); }
+	@media (max-width: 767px) { .work-grid { grid-template-columns: 1fr; } .work-featured { grid-column: auto; } .work-item:nth-child(3), .work-item:nth-child(5) { padding-top: 0; } }
+</style>

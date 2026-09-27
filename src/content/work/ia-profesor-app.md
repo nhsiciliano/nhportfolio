@@ -16,14 +16,14 @@ projectUrl: https://ia-profesor.vercel.app
 
 IA Profesor is a fullstack learning platform that combines an AI tutor with structured learning paths, progress tracking, and rewards. The experience is designed for students and educators, with a responsive web interface and a REST API that powers sessions, analytics, and personalised learning history.
 
-## 🧭 Product Scope
+## Product Scope
 
 - AI tutor with streaming responses and session history.
 - Learning paths, achievements, and engagement analytics.
 - Dashboard for students to track progress and activity.
 - Secure authentication and profile management.
 
-## 🧱 Frontend (Next.js)
+## Frontend (Next.js)
 
 The frontend uses Next.js 15 with the App Router and a UI tuned for educational workflows. It includes a modular component library, client helpers, and a dedicated auth provider to manage Supabase sessions.
 
@@ -35,7 +35,7 @@ The frontend uses Next.js 15 with the App Router and a UI tuned for educational 
 - **Env variables:** `NEXT_PUBLIC_API_BASE_URL`, `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_BASE_URL`.
 - **Deploy:** Vercel with `npm run build` and `NEXT_PUBLIC_*` variables configured.
 
-## 🛠️ Backend (NestJS)
+## Backend (NestJS)
 
 The backend exposes a REST API built on NestJS 11 with Supabase auth, Prisma ORM, and clear validation pipelines. It powers tutor sessions, user state, rewards, and analytics.
 
@@ -50,7 +50,7 @@ The backend exposes a REST API built on NestJS 11 with Supabase auth, Prisma ORM
 - **Key endpoints:** `GET /users/me`, `GET /tutor/sessions`.
 - **Deploy:** Railway with `npm run build` and `npm run start`, CORS configured for the frontend domain.
 
-## ✅ Outcomes
+## Outcomes
 
 - Centralised fullstack architecture aligned to learning and tutoring workflows.
 - AI tutor integrated with session persistence and progress history.

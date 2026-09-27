@@ -1,128 +1,65 @@
 ---
-import ContactCTA from "../components/ContactCTA.astro";
-import Hero from "../components/Hero.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
 ---
 
-<BaseLayout
-	title="About | Nicolás Siciliano"
-	description="About Nicolás Siciliano Developer"
->
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Nicolás Siciliano React Fan"
-				/>
-			</Hero>
-
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Creative and proactive Fullstack Developer with
-						experience in web and mobile projects focused on health
-						and science. I specialize in modern technologies such as
-						React, NextJs, Astro and NodeJs, and I enjoy teamwork,
-						continuous improvement, and the creation of intuitive
-						technological solutions.
-					</p>
+<BaseLayout title="About | Nicolás Siciliano" description="About Nicolás Siciliano, a full-stack developer focused on useful, accessible web applications.">
+	<main class="page-main" id="main">
+		<section class="about-hero container">
+			<div><p class="eyebrow">About</p><h1 class="intro-heading">Curious by nature. Precise by practice.</h1><p class="intro-copy">I’m Nicolás, a full-stack developer who enjoys turning complicated ideas into interfaces people can actually use.</p></div>
+			<img src="/assets/profilepic.jpg" alt="Nicolás Siciliano seated beside a train window" width="3024" height="4032" fetchpriority="high" />
+		</section>
+		<section class="about-content container section-space">
+			<div class="about-lead reveal"><h2 class="section-heading">The work behind the work.</h2><p>My experience spans web and mobile projects, with a focus on health and science. I work across product thinking, interface design, and implementation, and I value teamwork and continuous improvement.</p></div>
+			<div class="about-grid reveal">
+				<section><h3>Education</h3><ul><li><span>Fullstack Developer</span><small>Digital House / Dec 2025</small></li><li><span>Web Designer</span><small>Digital House / Mar 2025</small></li><li><span>Front End Career Path</span><small>Codecademy / Oct 2022</small></li></ul></section>
+				<section><h3>Tools & practice</h3><p>React, React Native, Next.js, Astro, Node.js, Tailwind CSS, HTML, CSS, and JavaScript.</p><h3 class="language-title">Languages</h3><p>Spanish: native<br />English: C1 advanced</p><a class="text-link" href="https://www.loom.com/share/a1bb9779898a41d59c468aeae843026e" target="_blank" rel="noopener noreferrer">Hear my English <span aria-hidden="true">↗</span></a></section>
+			</div>
+			<section class="academy reveal" aria-labelledby="academy-title">
+				<div class="academy-heading">
+					<div><p class="eyebrow">Continued learning / Anthropic</p><h2 id="academy-title" class="section-heading">Claude Academy.</h2></div>
+					<p>Six completed courses covering Claude, its developer tools, and practical AI fluency.</p>
 				</div>
+				<ol class="academy-list">
+					<li><span class="course-number" aria-hidden="true">01</span><a href="/certificates/claude-101.pdf" target="_blank" rel="noopener noreferrer">Claude 101<span class="sr-only"> certificate (opens in a new tab)</span></a></li>
+					<li><span class="course-number" aria-hidden="true">02</span><a href="/certificates/claude-code-101.pdf" target="_blank" rel="noopener noreferrer">Claude Code 101<span class="sr-only"> certificate (opens in a new tab)</span></a></li>
+					<li><span class="course-number" aria-hidden="true">03</span><a href="/certificates/claude-code-in-action.pdf" target="_blank" rel="noopener noreferrer">Claude Code in Action<span class="sr-only"> certificate (opens in a new tab)</span></a></li>
+					<li><span class="course-number" aria-hidden="true">04</span><a href="/certificates/claude-platform-101.pdf" target="_blank" rel="noopener noreferrer">Claude Platform 101<span class="sr-only"> certificate (opens in a new tab)</span></a></li>
+					<li><span class="course-number" aria-hidden="true">05</span><a href="/certificates/introduction-to-claude-cowork.pdf" target="_blank" rel="noopener noreferrer">Introduction to Claude Cowork<span class="sr-only"> certificate (opens in a new tab)</span></a></li>
+					<li><span class="course-number" aria-hidden="true">06</span><a href="/certificates/ai-fluency-framework-and-foundations.pdf" target="_blank" rel="noopener noreferrer">AI Fluency: Framework &amp; Foundations<span class="sr-only"> certificate (opens in a new tab)</span></a></li>
+				</ol>
 			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Fullstack Developer - Digital House | Dic 2025</p>
-					<p>Web Designer - Digital House | Mar 2025</p>
-					<p>Front End Career Path - Codecademy | Oct 2022</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>
-						React | React Native | NextJs | Astro | NodeJs |
-						TailwindCSS | HTML | CSS | JavaScript
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Languages</h2>
-				<div class="content">
-					<p>Spanish - Native | English - C1 Advanced</p>
-					<a
-						href="https://www.loom.com/share/a1bb9779898a41d59c468aeae843026e"
-						target="_blank"
-						rel="noopener noreferrer">Check my English level here</a
-					>
-				</div>
-			</section>
-		</main>
-
+		</section>
 		<ContactCTA />
-	</div>
+	</main>
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
-	.content {
-		grid-column: 2 / 4;
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+	.about-hero { display: grid; grid-template-columns: 1fr .9fr; align-items: end; gap: clamp(2rem, 6vw, 6rem); padding-block: clamp(4rem, 8vw, 7rem); }
+	.about-hero h1 { margin-top: 1.3rem; }
+	.about-hero .intro-copy { margin-top: 2rem; }
+	.about-hero img { width: 100%; aspect-ratio: 1.08; object-fit: cover; border-radius: var(--radius); }
+	.about-content { border-top: 1px solid var(--line); }
+	.about-lead { display: grid; grid-template-columns: 1fr .8fr; gap: clamp(2rem, 8vw, 8rem); align-items: end; }
+	.about-lead p { max-width: 55ch; color: var(--ink-soft); font-size: clamp(1.08rem, 1.7vw, 1.3rem); }
+	.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 8vw, 8rem); margin-top: clamp(5rem, 9vw, 9rem); }
+	.about-grid section { border-top: 1px solid var(--line); padding-top: 1.5rem; }
+	.about-grid h3 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+	.about-grid ul { list-style: none; }
+	.about-grid li { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-block: .8rem; }
+	.about-grid li + li { border-top: 1px solid var(--line); }
+	.about-grid small { flex: none; font-family: var(--font-mono); color: var(--ink-soft); font-size: .7rem; }
+	.about-grid p { max-width: 45ch; color: var(--ink-soft); }
+	.about-grid .language-title { margin-top: 2.5rem; }
+	.about-grid .text-link { margin-top: 1rem; }
+	.academy { margin-top: clamp(5rem, 9vw, 9rem); }
+	.academy-heading { display: grid; grid-template-columns: 1fr .8fr; gap: clamp(2rem, 8vw, 8rem); align-items: end; margin-bottom: clamp(2rem, 5vw, 4rem); }
+	.academy-heading h2 { margin-top: 1rem; }
+	.academy-heading > p { max-width: 45ch; color: var(--ink-soft); }
+	.academy-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 8vw, 8rem); list-style: none; }
+	.academy-list li { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); gap: 1rem; align-items: baseline; border-top: 1px solid var(--line); padding-block: 1.3rem 2rem; font-size: clamp(1.15rem, 2vw, 1.55rem); line-height: 1.3; }
+	.academy-list a { width: fit-content; color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: .25em; transition: color .2s ease; }
+	.academy-list a:hover { color: var(--accent); }
+	.course-number { font-family: var(--font-mono); font-size: .7rem; color: var(--ink-soft); }
+	@media (max-width: 767px) { .about-hero, .about-lead, .about-grid, .academy-heading, .academy-list { grid-template-columns: 1fr; } .about-hero img { max-width: 580px; } .about-grid li { flex-direction: column; gap: .1rem; } }
 </style>

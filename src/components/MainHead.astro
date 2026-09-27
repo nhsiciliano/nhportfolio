@@ -1,47 +1,46 @@
 ---
+import '@fontsource-variable/space-grotesk/wght.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
 import '../styles/global.css';
 
-interface Props {
-	title?: string | undefined;
-	description?: string | undefined;
-}
-
+interface Props { title?: string; description?: string; }
 const {
-	title = 'Nico Siciliano: Personal Site',
-	description = 'The personal site of Nico Siciliano.',
+	title = 'Nicolás Siciliano | Full-stack developer',
+	description = 'Nicolás Siciliano builds thoughtful digital products, complex web applications, and clear interfaces for ambitious teams.',
 } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
-<meta name="viewport" content="width=device-width" />
-<meta name="generator" content={Astro.generator} />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content={description} />
+<meta name="theme-color" content="#12191b" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
 <title>{title}</title>
-
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
-	rel="stylesheet"
-/>
 <script is:inline>
-	// This code is inlined in the head to make dark mode instant & blocking.
-	const getThemePreference = () => {
-		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-			return localStorage.getItem('theme');
+	(() => {
+		const preference = () => {
+			try {
+				const stored = localStorage.getItem('theme');
+				if (stored === 'dark' || stored === 'light') return stored;
+			} catch {}
+			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		};
+		const applyTheme = () => {
+			const root = document.documentElement;
+			const dark = preference() === 'dark';
+			root.classList.add('js');
+			root.classList.toggle('motion-ok', !window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+			root.classList.toggle('theme-dark', dark);
+			document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#12191b' : '#f1f2f1');
+		};
+		applyTheme();
+		if (!window.__themeSwapReady) {
+			window.__themeSwapReady = true;
+			document.addEventListener('astro:after-swap', applyTheme);
 		}
-		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-	};
-	const isDark = getThemePreference() === 'dark';
-	document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
-
-	if (typeof localStorage !== 'undefined') {
-		// Watch the document element and persist user preference when it changes.
-		const observer = new MutationObserver(() => {
-			const isDark = document.documentElement.classList.contains('theme-dark');
-			localStorage.setItem('theme', isDark ? 'dark' : 'light');
-		});
-		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-	}
+	})();
 </script>

@@ -16,7 +16,7 @@ projectUrl: https://elrincondelarteapp.vercel.app
 
 Web project built with [Astro 5](https://astro.build/) for the dance academy **El Rincón del Arte**, crafted to highlight its artistic proposal, teaching styles, and contact channels through a modern, minimalist aesthetic. The goal is to deliver a smooth first digital touchpoint tailored to prospective students and their families.
 
-## 🧱 Technology Stack
+## Technology Stack
 
 - **Astro 5** as the core framework, focused on Static Site Generation with targeted islands of interactivity.
 - **TypeScript** baked in to guarantee typed components and data contracts.
@@ -24,7 +24,7 @@ Web project built with [Astro 5](https://astro.build/) for the dance academy **E
 - **Deployment on Vercel** via `@astrojs/vercel`, optimising static builds and continuous integration.
 - Development tooling: PNPM, Astro Check, Netlify forms compatibility.
 
-## ✨ Key Features
+## Key Features
 
 - Sticky navigation with logo, internal anchors, and social links (Instagram and YouTube).
 - Hero section with a call to action, informational badges, and a featured photo.
@@ -36,7 +36,7 @@ Web project built with [Astro 5](https://astro.build/) for the dance academy **E
 - Footer with branding, calls to action, and external links.
 
 
-## 💼 Applied Knowledge
+## Applied Knowledge
 
 - Led the end-to-end redesign of El Rincón del Arte’s landing page, transforming Astro’s base template into a responsive site with a distinctive identity.
 - Implemented reusable modular components (navbar, hero sections, style cards, carousel, form, footer) powered by strongly typed configuration files.

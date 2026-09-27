@@ -1,8 +1,13 @@
 ---
-import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Not Found" description="404 Error — this page was not found">
-	<Hero title="Page Not Found" tagline="Not found" />
+<BaseLayout title="Page not found | Nicolás Siciliano" description="This page could not be found.">
+	<main class="page-main not-found container" id="main"><p class="eyebrow">404</p><h1>That page isn’t here.</h1><p class="intro-copy">The link may have changed. You can return to the portfolio or browse the projects.</p><div class="actions"><a class="button" href="/">Home</a><a class="button button-outline" href="/work/">View work</a></div></main>
 </BaseLayout>
+
+<style>
+	.not-found { display: flex; flex-direction: column; justify-content: center; min-height: 65dvh; padding-block: 5rem; }
+	h1 { max-width: 11ch; margin-block: 1.4rem; font-size: clamp(3.3rem, 8vw, 8rem); }
+	.actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+</style>
